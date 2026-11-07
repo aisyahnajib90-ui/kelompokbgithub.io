@@ -1,0 +1,661 @@
+/* ==========================
+   1. BASIC STYLE
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #354b3c;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+section {
+    scroll-margin-top: 75px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ==========================
+   2. NAVBAR
+========================== */
+
+header {
+    background: #286b49;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    font-size: 27px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #ffdc78;
+}
+
+/* ==========================
+   3. HOME / HERO
+========================== */
+
+.hero {
+    min-height: 570px;
+    padding: 75px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 45px;
+
+    background: linear-gradient(
+        120deg,
+        #e5f3e4,
+        #f9f5e8
+    );
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-label {
+    display: inline-block;
+    background: #d3e9d4;
+    color: #286b49;
+    padding: 9px 17px;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.2;
+    color: #286b49;
+    margin: 22px 0;
+}
+
+.hero h1 span {
+    display: block;
+    color: #e5a92e;
+}
+
+.hero p {
+    max-width: 550px;
+    color: #5e7063;
+    margin-bottom: 30px;
+    font-size: 17px;
+}
+
+.main-button {
+    display: inline-block;
+    background: #eebd4e;
+    color: #354b3c;
+    text-decoration: none;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    background: #dca52d;
+    transform: translateY(-3px);
+}
+
+/* Ilustrasi emoji pengganti foto */
+
+.hero-illustration {
+    flex: 1;
+    min-height: 350px;
+    max-width: 520px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+
+    background: linear-gradient(
+        #bfe8f5 0%,
+        #e9f8e7 72%,
+        #a8d69b 72%
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.planet {
+    font-size: clamp(100px, 16vw, 180px);
+    z-index: 2;
+    filter: drop-shadow(
+        0 10px 8px rgba(40, 107, 73, 0.15)
+    );
+    animation: float 4s ease-in-out infinite;
+}
+
+.sun {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    font-size: 55px;
+}
+
+.cloud {
+    position: absolute;
+    font-size: 48px;
+    opacity: 0.9;
+}
+
+.cloud-one {
+    top: 45px;
+    left: 35px;
+}
+
+.cloud-two {
+    top: 105px;
+    right: 70px;
+    font-size: 35px;
+}
+
+.tree {
+    position: absolute;
+    bottom: 35px;
+    font-size: 55px;
+    z-index: 3;
+}
+
+.tree-one {
+    left: 25px;
+}
+
+.tree-two {
+    right: 25px;
+}
+
+.flower {
+    position: absolute;
+    bottom: 25px;
+    left: 45%;
+    font-size: 30px;
+}
+
+.grass {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 5px;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* ==========================
+   4. GENERAL SECTION
+========================== */
+
+.section {
+    padding: 85px 7%;
+}
+
+.light-section {
+    background: #f4f8f2;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
+
+.section-heading span {
+    color: #e5a92e;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    color: #286b49;
+    margin: 12px 0;
+}
+
+.section-heading p {
+    color: #718074;
+}
+
+/* ==========================
+   5. ABOUT
+========================== */
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    max-width: 1050px;
+    margin: auto;
+}
+
+.about-illustration {
+    flex: 1;
+    min-height: 330px;
+    border-radius: 20px;
+
+    background: linear-gradient(
+        145deg,
+        #d9f0dc,
+        #f8f1d9
+    );
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+}
+
+.about-emoji {
+    font-size: 120px;
+    line-height: 1.3;
+}
+
+.about-caption {
+    font-weight: bold;
+    color: #286b49;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.about-small-emojis {
+    font-size: 30px;
+    margin-top: 8px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h3 {
+    color: #286b49;
+    font-size: 26px;
+    margin-bottom: 18px;
+}
+
+.about-text p {
+    color: #68776c;
+    margin-bottom: 15px;
+}
+
+/* ==========================
+   6. CARD CONTAINER
+========================== */
+
+.card-container {
+    max-width: 1150px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.info-card,
+.waste-card,
+.tip-card {
+    padding: 30px 25px;
+    border-radius: 18px;
+    transition: 0.3s;
+}
+
+.info-card:hover,
+.waste-card:hover,
+.tip-card:hover {
+    transform: translateY(-6px);
+}
+
+.card-icon {
+    font-size: 43px;
+    margin-bottom: 15px;
+}
+
+.info-card h3,
+.waste-card h3,
+.tip-card h3 {
+    color: #286b49;
+    margin-bottom: 12px;
+    font-size: 21px;
+}
+
+.info-card h4 {
+    margin-top: 18px;
+    margin-bottom: 7px;
+    color: #286b49;
+}
+
+.info-card p,
+.waste-card p,
+.tip-card p {
+    color: #657368;
+    font-size: 14px;
+}
+
+/* ==========================
+   7. POLLUTION COLORS
+========================== */
+
+.air-card {
+    background: #ffe9dc;
+}
+
+.water-card {
+    background: #deefff;
+}
+
+.soil-card {
+    background: #e4f1d9;
+}
+
+/* ==========================
+   8. WASTE COLORS
+========================== */
+
+.organic {
+    background: #e1f1d9;
+}
+
+.inorganic {
+    background: #e0efff;
+}
+
+.hazardous {
+    background: #fff0d3;
+}
+
+.waste-card strong {
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #286b49;
+}
+
+/* ==========================
+   9. AIR QUALITY API
+========================== */
+
+.air-section {
+    background: #eaf4e9;
+}
+
+.api-card {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.api-card h3 {
+    color: #286b49;
+    margin-bottom: 5px;
+}
+
+.api-description {
+    color: #849087;
+    margin-bottom: 25px;
+}
+
+.api-values {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.api-value {
+    background: #f0f7ef;
+    padding: 20px;
+    border-radius: 13px;
+}
+
+.api-value p {
+    color: #718074;
+    font-size: 14px;
+}
+
+.api-value h4 {
+    font-size: 27px;
+    color: #286b49;
+    margin-top: 5px;
+}
+
+.api-source {
+    margin-top: 25px;
+    font-size: 12px;
+    color: #849087;
+}
+
+.api-error {
+    color: #b34b3b;
+    background: #fff0ed;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* ==========================
+   10. ECO TIPS
+========================== */
+
+.tip-card {
+    background: white;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* ==========================
+   11. CONTACT
+========================== */
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+
+    background: #f4f8f2;
+    padding: 35px;
+    border-radius: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #286b49;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 20px;
+    border: 1px solid #d4dfd5;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid #8dbb96;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.form-note {
+    margin-top: 15px;
+    color: #849087;
+    font-size: 12px;
+}
+
+/* ==========================
+   12. FOOTER
+========================== */
+
+.footer {
+    background: #286b49;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.footer h2 {
+    margin-bottom: 10px;
+}
+
+.footer p {
+    color: #e0eee3;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+/* ==========================
+   13. RESPONSIVE
+========================== */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 13px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .section {
+        padding: 60px 20px;
+    }
+
+    .hero {
+        padding: 55px 20px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-illustration {
+        min-height: 230px;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .api-card {
+        padding: 22px;
+    }
+
+    .api-values {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        padding: 22px;
+    }
+
+    .about-emoji {
+        font-size: 90px;
+    }
+}
